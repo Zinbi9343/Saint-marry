@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Saint Mary Convent</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-dark text-white py-5 text-center">
+    <div class="container">
+      <h1 class="animate__animated animate__bounceInLeft">Welcome to Our School</h1>
+    </div>
+  </header>
+
+<!-- About Us -->
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="animate__animated animate__fadeInDown">About Us</h2>
+    <p>Saint Mary Convent School in Pathari, Madhya Pradesh, welcomes you to a nurturing environment where young minds reach their fullest potential. Situated amidst serene surroundings, our school fosters academic excellence, character development, and holistic growth. With experienced educators, state-of-the-art facilities, and a comprehensive curriculum aligned with CBSE, we empower our students to succeed in an ever-changing world.</p>
+    <a href="about.html" class="btn btn-primary">Learn More</a>
+  </div>
+</section>
+
+<!-- Courses -->
+<section id="courses" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="animate__animated animate__fadeInDown">Courses</h2>
+    <p>Our school offers a wide range of courses to cater to the diverse interests and talents of our students. From core subjects to extracurricular activities, we provide a holistic learning experience that prepares students for future success.</p>
+    <a href="courses.html" class="btn btn-primary">Explore Courses</a>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="py-5">
+  <div class="container">
+    <h2 class="animate__animated animate__fadeInDown">Gallery</h2>
+    <p>Explore the vibrant life at Saint Mary Convent School through our gallery. From academic events to cultural celebrations, our gallery showcases the rich tapestry of experiences that define our school community.</p>
+    <a href="gallery.html" class="btn btn-primary">View Gallery</a>
+  </div>
+</section>
+
+<!-- News -->
+<section id="news" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="animate__animated animate__fadeInDown">News</h2>
+    <p>Stay updated with the latest news and events happening at Saint Mary Convent School. From academic achievements to community initiatives, our news section keeps you informed and engaged with our school community.</p>
+    <a href="news.html" class="btn btn-primary">Read News</a>
+  </div>
+</section>
+
+<!-- Events -->
+<section id="events" class="py-5">
+  <div class="container">
+    <h2 class="animate__animated animate__fadeInDown">Events</h2>
+    <p>Experience the vibrant culture of Saint Mary Convent School through our exciting events. From sports competitions to cultural festivals, our events bring together students, parents, and staff to celebrate our school spirit and achievements.</p>
+    <a href="events.html" class="btn btn-primary">Check Events</a>
+  </div>
+</section>
+
+<!-- Blog -->
+<section id="blog" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="animate__animated animate__fadeInDown">Blog</h2>
+    <p>Dive into insightful articles and reflections shared by our students, teachers, and staff on our school blog. Explore diverse topics ranging from academic insights to personal reflections, and join the conversation on education and personal growth.</p>
+    <a href="blog.html" class="btn btn-primary">Read Blog</a>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="animate__animated animate__fadeInDown">Contact</h2>
+    <p>Have questions or want to learn more about Saint Mary Convent School? Contact us using the information below, and our dedicated team will be happy to assist you.</p>
+    <p>Email: stmarysch9575@gmail.com</p>
+    <p>Phone: +91 9575907639</p>
+    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <p>&copy; Zubair khan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Send Message</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="contactForm" class="animate__animated animate__fadeInUp" onsubmit="sendMessage()">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js"></script>
+  <script src="main.js>
+  </script>
+</body>
+</html>

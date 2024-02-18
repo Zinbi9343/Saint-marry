@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Saint Mary Convent School</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Assuming you have a stylesheet named styles.css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+  <style>
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+    }
+    .gallery-item img {
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .lightbox-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+    .gallery-item:hover .lightbox-caption {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Saint Mary Convent</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item active"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Gallery</h2>
+      <div class="row">
+        <!-- Image 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item">
+            <a href="img/img1.jpg" data-fancybox="gallery" data-caption="Image 1 Title">
+              <img src="img/img1.jpg" class="img-fluid" alt="Image 1">
+              <div class="lightbox-caption">Image 1 Title</div>
+            </a>
+          </div>
+        </div>
+        <!-- Image 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item">
+            <a href="img/img2.jpg" data-fancybox="gallery" data-caption="Image 2 Title">
+              <img src="img/img2.jpg" class="img-fluid" alt="Image 2">
+              <div class="lightbox-caption">Image 2 Title</div>
+            </a>
+          </div>
+        </div>
+        <!-- Image 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item">
+            <a href="img/img3.jpg" data-fancybox="gallery" data-caption="Image 3 Title">
+              <img src="img/img3.jpg" class="img-fluid" alt="Image 3">
+              <div class="lightbox-caption">Image 3 Title</div>
+            </a>
+          </div>
+        </div>
+        <!-- Add more images here -->
+        <!-- Image 4 -->
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item">
+            <a href="img/img4.jpg" data-fancybox="gallery" data-caption="Image 4 Title">
+              <img src="img/img4.jpg" class="img-fluid" alt="Image 4">
+              <div class="lightbox-caption">Image 4 Title</div>
+            </a>
+          </div>
+        </div>
+        <!-- Image 5 -->
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item">
+            <a href="img/img5.jpg" data-fancybox="gallery" data-caption="Image 5 Title">
+              <img src="img/img5.jpg" class="img-fluid" alt="Image 5">
+              <div class="lightbox-caption">Image 5 Title</div>
+            </a>
+          </div>
+        </div>
+        <!-- Image 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item">
+            <a href="img/img6.jpg" data-fancybox="gallery" data-caption="Image 6 Title">
+              <img src="img/img6.jpg" class="img-fluid" alt="Image 6">
+              <div class="lightbox-caption">Image 6 Title</div>
+            </a>
+          </div>
+        </div>
+        <!-- Image 7 -->
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item">
+            <a href="img/img7.jpg" data-fancybox="gallery" data-caption="Image 7 Title">
+              <img src="img/img7.jpg" class="img-fluid" alt="Image 7">
+              <div class="lightbox-caption">Image 7 Title</div>
+            </a>
+          </div>
+        </div>
+        <!-- Image 8 -->
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item">
+            <a href="img/img8.jpg" data-fancybox="gallery" data-caption="Image 8 Title">
+              <img src="img/img8.jpg" class="img-fluid" alt="Image 8">
+              <div class="lightbox-caption">Image 8 Title</div>
+            </a>
+          </div>
+        </div>
+        <!-- Image 9 -->
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item">
+            <a href="img/img9.jpg" data-fancybox="gallery" data-caption="Image 9 Title">
+              <img src="img/img9.jpg" class="img-fluid" alt="Image 9">
+              <div class="lightbox-caption">Image 9 Title</div>
+            </a>
+          </div>
+        </div>
+        <!-- Image 10 -->
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item">
+            <a href="img/img10.jpg" data-fancybox="gallery" data-caption="Image 10 Title">
+              <img src="img/img10.jpg" class="img-fluid" alt="Image 10">
+              <div class="lightbox-caption">Image 10 Title</div>
+            </a>
+          </div>
+        </div>
+        <!-- Image 11 -->
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item">
+            <a href="img/img11.jpg" data-fancybox="gallery" data-caption="Image 11 Title">
+              <img src="img/img11.jpg" class="img-fluid" alt="Image 11">
+              <div class="lightbox-caption">Image 11 Title</div>
+            </a>
+          </div>
+        </div>
+        <!-- Image 12 -->
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item">
+            <a href="img/img12.jpg" data-fancybox="gallery" data-caption="Image 12 Title">
+              <img src="img/img12.jpg" class="img-fluid" alt="Image 12">
+              <div class="lightbox-caption">Image 12 Title</div>
+            </a>
+          </div>
+        </div>
+        <!-- Image 13 -->
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item">
+            <a href="img/img13.jpg" data-fancybox="gallery" data-caption="Image 13 Title">
+              <img src="img/img13.jpg" class="img-fluid" alt="Image 13">
+              <div class="lightbox-caption">Image 13 Title</div>
+            </a>
+          </div>
+        </div>
+        <!-- Image 14 -->
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item">
+            <a href="img/img14.jpg" data-fancybox="gallery" data-caption="Image 14 Title">
+              <img src="img/img14.jpg" class="img-fluid" alt="Image 14">
+              <div class="lightbox-caption">Image 14 Title</div>
+            </a>
+          </div>
+        </div>
+        <!-- Image 15 -->
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item">
+            <a href="img/img15.jpg" data-fancybox="gallery" data-caption="Image 15 Title">
+              <img src="img/img15.jpg" class="img-fluid" alt="Image 15">
+              <div class="lightbox-caption">Image 15 Title</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <p>&copy; 2024 Saint Mary Convent School. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+</body>
+</html>

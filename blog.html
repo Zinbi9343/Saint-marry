@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Saint Mary Convent School</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Assuming you have a stylesheet named styles.css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Saint Mary Convent</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+          <li class="nav-item active"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Section -->
+  <section id="blog" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Blog</h2>
+
+      <!-- Blog Form -->
+      <div id="blogForm">
+        <h3>Add Blog</h3>
+        <form id="addBlogForm" class="mt-4">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="role">Role:</label>
+            <select class="form-control" id="role" name="role" required>
+              <option value="student">Student</option>
+              <option value="staff">Staff</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+          </div>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="image">Image (Optional):</label>
+            <input type="file" class="form-control-file" id="image" name="image">
+          </div>
+          <button type="submit" class="btn btn-primary">Add Blog</button>
+        </form>
+      </div>
+
+      <!-- Blog Posts -->
+      <hr>
+      <h3>Blog Posts</h3>
+      <div id="blogPosts">
+        <!-- Blog posts will be dynamically added here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <p>&copy; 2024 Saint Mary Convent School. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Function to add a new blog post
+    function addBlogPost(name, role, title, description, image) {
+      var blogPostsDiv = document.getElementById("blogPosts");
+      var date = new Date().toLocaleDateString();
+      var time = new Date().toLocaleTimeString();
+      var blogHTML = `
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">${title}</h5>
+            <p class="card-text"><strong>By:</strong> ${name} (${role})<br><strong>Date:</strong> ${date} ${time}<br><strong>Description:</strong> ${description}</p>`;
+      if (image) {
+        blogHTML += `<img src="${image}" class="img-fluid mb-3" alt="Blog Image">`;
+      }
+      blogHTML += `<div class="reaction-icons">
+                      <button class="btn btn-sm btn-success mr-1" onclick="react('good')">&#x1F44D; Good</button>
+                      <button class="btn btn-sm btn-danger mr-1" onclick="react('bad')">&#x1F44E; Bad</button>
+                      <button class="btn btn-sm btn-primary mr-1" onclick="react('cool')">&#x1F60E; Cool</button>
+                      <button class="btn btn-sm btn-warning mr-1" onclick="react('wow')">&#x1F4AB; Wow</button>
+                      <button class="btn btn-sm btn-info" onclick="react('smart')">&#x1F913; Smart</button>
+                    </div>
+                  </div>`;
+      blogPostsDiv.innerHTML += blogHTML;
+    }
+
+    // Function to react to a blog post
+    function react(reaction) {
+      alert("Reacted with: " + reaction);
+      // Perform any desired action based on the reaction
+    }
+
+    // Blog form submission
+    document.getElementById("addBlogForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var name = document.getElementById("name").value;
+      var role = document.getElementById("role").value;
+      var title = document.getElementById("title").value;
+      var description = document.getElementById("description").value;
+      var image = document.getElementById("image").value; // Assuming you're storing image URL in the input
+      // Add the blog post to the page
+      addBlogPost(name, role, title, description, image);
+      // Reset form fields
+      document.getElementById("addBlogForm").reset();
+      alert("Blog added successfully!");
+    });
+  </script>
+</body>
+</html>
